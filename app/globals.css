@@ -1,27 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+body{
+  position: relative;
+  background-color: #F3F4F6;
+  font-size: 16px;
+  user-select: none;
+  transition: 0.2s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+.dark body{
+    background-color: #1B1B1F;
+}
+
+
+.switch{
+  background:#E5E7EB;
+  border-radius: 50px;
+  height: 34px;
+  box-shadow: 0px 2px 4px 0px rgba(3, 7, 18, 0.04), 0px 0px 8px 0px rgba(3, 7, 18, 0.02) inset, 0px 0px 0px 0.5px rgba(3, 7, 18, 0.06) inset, 0px 2px 4px 0px rgba(3, 7, 18, 0.04) inset, 0px 1px 1px 0px rgba(3, 7, 18, 0.04) inset;
+}
+
+.dark .switch{
+  background:#464B50;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20), 0px 0px 8px 0px rgba(0, 0, 0, 0.10) inset, 0px 0px 0px 0.5px rgba(255, 255, 255, 0.16) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.10) inset, 0px 1px 1px 0px rgba(0, 0, 0, 0.10) inset;
+}
+.notification{
+  grid-column: 2/3;
+}
+
+.exo{
+  font-family: 'Exo 2', sans-serif;
+}
+
+.notificationAnimation {
+  animation-duration: 0.2s;
+  animation-name: slidein;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  99%{
+    transform: translateX(600px);
+    opacity: 0;
+  }
+  
+  100%{
+    opacity: 0;
+    display: none;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .badge-green{
+    @apply border-emerald-300/30 bg-green-300/20 text-green-800 dark:border-emerald-700 dark:bg-emerald-900 dark:text-green-300 
+  }
+  .badge-blue{
+    @apply border-sky-300/30 bg-blue-300/20 text-blue-800 dark:border-sky-700 dark:bg-sky-900 dark:text-blue-300 
+  }
+  .badge-purple{
+    @apply border-indigo-300/30 bg-violet-300/20 text-violet-800 dark:border-indigo-700 dark:bg-indigo-900 dark:text-violet-300 
+  }
+  .badge-gray{
+    @apply border-gray-300/30 bg-neutral-300/20 text-neutral-700 dark:border-gray-300 dark:bg-neutral-700 dark:text-neutral-300 
+  }
+
 }
