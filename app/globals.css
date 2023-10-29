@@ -60,9 +60,46 @@ body{
   }
 }
 
+.YGradient{
+  background: linear-gradient(90deg, #F94144 0%, #F3722C 16.67%, #F8961E 33.33%, #F9C74F 50%, #90BE6D 66.67%, #43AA8B 83.33%, #577590 100%);
+}
+
+.YColorOne{
+  background-color: #F94144;
+}
+.YColorTwo{
+  background-color: #F3722C;
+}
+.YColorThree{
+  background-color: #F8961E;
+}
+.YColorFour{
+  background-color: #F9C74F;
+}
+.YColorFive{
+  background-color: #90BE6D;
+}
+.YColorSix{
+  background-color: #43AA8B;
+}
+.YColorSeven{
+  background-color: #577590;
+}
+
+.socialBtn{
+  border-radius: 6px;
+  border-color:#E5E7EB;
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.00) 0%, rgba(3, 7, 18, 0.03) 100%), #FFF;
+
+  box-shadow: 0px 0.5px 0px 0px rgba(3, 7, 18, 0.16), 0px 0.25px 0px 0px rgba(3, 7, 18, 0.16);
+
+  transition: all 0.3s;
+}
+
+
 @layer components {
   .badge-green{
-    @apply border-emerald-300/30 bg-green-300/20 text-green-800 dark:border-emerald-700 dark:bg-emerald-900 dark:text-green-300 
+    @apply border-emerald-300/30 bg-green-300/30 text-green-800 dark:border-emerald-700 dark:bg-emerald-900 dark:text-green-300 
   }
   .badge-blue{
     @apply border-sky-300/30 bg-blue-300/20 text-blue-800 dark:border-sky-700 dark:bg-sky-900 dark:text-blue-300 
@@ -72,6 +109,10 @@ body{
   }
   .badge-gray{
     @apply border-gray-300/30 bg-neutral-300/20 text-neutral-700 dark:border-gray-300 dark:bg-neutral-700 dark:text-neutral-300 
+  }
+
+  .input-style{
+    @apply px-3 border h-[42px] outline-none text-lg font-['Open_Sans'] focus:border-blue-400 focus:outline-blue-300/30 outline-offset-0
   }
 
 }

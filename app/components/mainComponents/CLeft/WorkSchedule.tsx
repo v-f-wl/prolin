@@ -15,18 +15,6 @@ const WorkSchedule = () => {
         title='7h 23min' 
         style="green"
       />
-      <InfoBtn 
-        title='7h 23min' 
-        style="blue"
-      />
-      <InfoBtn 
-        title='7h 23min' 
-        style="gray"
-      />
-      <InfoBtn 
-        title='7h 23min' 
-        style="purple"
-      />
     </Widget>
   );
 }

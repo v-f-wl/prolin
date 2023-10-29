@@ -17,8 +17,12 @@ const config: Config = {
       gridTemplateColumns: {
         'main': '1fr 2.5fr 1fr',
         'notification': '24px 1fr',
+        'login': '1.6fr 1fr',
+        'signin': '1fr 1.6fr',
       },
-
+      gridTemplateRows: {
+        'for-gradient': '1fr auto'
+      }
     },
   },
   plugins: [],

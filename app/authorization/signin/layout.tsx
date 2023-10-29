@@ -1,10 +1,8 @@
-import './globals.css'
+import '../../globals.css'
 import type { Metadata } from 'next'
 import { Raleway } from 'next/font/google'
-import LeftMenu from './components/LeftMenu'
-import CNotification from './components/notification/CNotification'
-import { ThemeProvider } from './components/themeProvider/ThemeProvider'
 import Head from 'next/head'
+import { ThemeProvider } from '../../components/themeProvider/ThemeProvider'
 
 
 const inter = Raleway({ subsets: ['latin'] })
@@ -26,9 +24,7 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-          {/* <LeftMenu/> */}
           {children}
-          {/* <CNotification/> */}
         </ThemeProvider>
       </body>
     </html>

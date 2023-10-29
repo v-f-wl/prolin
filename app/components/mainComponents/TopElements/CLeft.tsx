@@ -3,7 +3,7 @@ const LeftContainer = () => {
     <div className="form-light flex item-center justify-between">
       <div className="">Belgrad, Serbia</div>
       <div className="font-['Open_Sans']">
-        17:42 pm
+        17:42
       </div>
     </div>
    );
