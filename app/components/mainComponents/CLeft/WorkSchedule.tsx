@@ -1,7 +1,18 @@
+'use client'
+import { useState } from "react";
 import InfoBtn from "../../UI/InfoBtn";
 import Widget from "../UI/Widget";
+import { useAppSelector } from "@/app/redux/store";
 
 const WorkSchedule = () => {
+  const isLoaded = useAppSelector((store) => store.Loading.value)
+
+  if(!isLoaded){
+    return (
+      <div className="w-full h-[120px] bg-neutral-200 dark:bg-neutral-500 rounded-xl animate-pulse"></div>
+    )
+  }
+
   return ( 
     <Widget>
       <div 

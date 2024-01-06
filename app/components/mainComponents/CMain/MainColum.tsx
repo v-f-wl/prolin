@@ -7,8 +7,8 @@ const MainColum = () => {
   return ( 
     <FlexGrid>
       <AssessWidget/>
-      {/* <MeetingWidget/> */}
       <TodoWidget/>
+      <MeetingWidget/>
     </FlexGrid>
   );
 }

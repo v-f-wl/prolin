@@ -5,6 +5,7 @@ import LeftMenu from './components/LeftMenu'
 import CNotification from './components/notification/CNotification'
 import { ThemeProvider } from './components/themeProvider/ThemeProvider'
 import Head from 'next/head'
+import { ReduxProvider } from './redux/provider'
 
 
 const inter = Raleway({ subsets: ['latin'] })
@@ -27,7 +28,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           {/* <LeftMenu/> */}
-          {children}
+          <ReduxProvider>
+            {children}
+          </ReduxProvider>
           {/* <CNotification/> */}
         </ThemeProvider>
       </body>

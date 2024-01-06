@@ -40,6 +40,7 @@ const YearSlide = () => {
         if (yearData[item] && yearData[item][i] !== undefined) {
           weekResult.push(
             <div
+              data-column-value={yearData[item]}
               className={`
                 ${yearData[item][i] >= 0 && yearData[item][i] < 16.67 && 'YColorOne'}
                 ${yearData[item][i] >= 16.67 && yearData[item][i] < 33.33 && 'YColorTwo'}
@@ -65,7 +66,10 @@ const YearSlide = () => {
       }
 
       result.push(
-        <div className="grid grid-cols-1 gap-3">
+        <div 
+          data-column-value={yearData[item]}
+          className="grid grid-cols-1 gap-3"
+        >
           {weekResult}
           <div className="text-center capitalize">{item}</div>
         </div>

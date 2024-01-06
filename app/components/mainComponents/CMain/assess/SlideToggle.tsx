@@ -3,7 +3,7 @@ import ToggleItem from "./ToggleItem";
 import { useEffect, useState } from "react";
 
 const SlideToggle = ({changeValue: changeFunc} : {changeValue: (label: string) => void}) => {
-  const [selectedValue, setSelectedValue] = useState('year')
+  const [selectedValue, setSelectedValue] = useState('week')
 
   useEffect(() => {
     changeFunc(selectedValue)

@@ -4,17 +4,23 @@ import InfoBtn from "../../UI/InfoBtn";
 import Widget from "../UI/Widget";
 import CAssess from "./assess/CAssess";
 
-import { LuPencilLine } from 'react-icons/lu'
 import WidgetTitle from "../../UI/WidgetTitle";
 import SlideToggle from "./assess/SlideToggle";
 import { useMemo, useState } from "react";
 import WeakSlide from "./assess/WeakSlide";
 import YearSlide from "./assess/YearSlide";
+import { useAppSelector } from "@/app/redux/store";
+import { useDispatch } from "react-redux";
+import { changeRatingModal } from "@/app/redux/features/RatingModal";
 
 
 const AssessWidget = () => {
-  const [widgetSlide, setWidgetSlide] = useState('year')
+  const [widgetSlide, setWidgetSlide] = useState('week')
 
+
+  const isLoaded = useAppSelector((store) => store.Loading.value)
+  const modalIsOpen = useAppSelector((store) => store.RatingModal.value)
+  const dispatch = useDispatch()
   const renderComponent = useMemo(() => {
     if(widgetSlide === 'mounth') return <div>Mounth</div>
     if(widgetSlide === 'year') return <YearSlide/>
@@ -26,14 +32,22 @@ const AssessWidget = () => {
     setWidgetSlide(prev => label)
   }
 
+  const openModalWindow = () => {
+    dispatch(changeRatingModal(true))
+  }
+  if(!isLoaded){
+    return (
+      <div className="w-full h-[310px] bg-neutral-200 dark:bg-neutral-500 animate-pulse rounded-xl"></div>
+    )
+  }
+
   return ( 
     <Widget>
       <CAssess>
         <FlexBetween>
           <WidgetTitle title="Assess the day"/>
           <FlexBetween className='gap-8'>
-            <LuPencilLine className='text-3xl cursor-pointer'/>
-            <InfoBtn title='Add a rating' style="green" icon={true}/>
+            <InfoBtn ClickBtn={openModalWindow} title='Add a rating' style="green" icon={true}/>
           </FlexBetween>
         </FlexBetween>
         {renderComponent}

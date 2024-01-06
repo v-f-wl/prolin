@@ -14,7 +14,7 @@ body{
 
 
 .dark body{
-    background-color: #1B1B1F;
+  background-color: #1B1B1F;
 }
 
 
@@ -88,7 +88,6 @@ body{
 
 .socialBtn{
   border-radius: 6px;
-  border-color:#E5E7EB;
   background: linear-gradient(180deg, rgba(3, 7, 18, 0.00) 0%, rgba(3, 7, 18, 0.03) 100%), #FFF;
 
   box-shadow: 0px 0.5px 0px 0px rgba(3, 7, 18, 0.16), 0px 0.25px 0px 0px rgba(3, 7, 18, 0.16);
@@ -96,6 +95,66 @@ body{
   transition: all 0.3s;
 }
 
+.proGradient{
+  border-radius: 10px;
+  background: linear-gradient(90deg, #90CAF4 0%, #5E2AF3 100%);
+}
+
+.proLabelGradient{
+  background: linear-gradient(90deg, #789BF4 0%, #FF46D6 100%);
+}
+
+
+
+
+/* Token Loading Animation */
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #96b8e1;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1.3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
 
 @layer components {
   .badge-green{
@@ -112,7 +171,7 @@ body{
   }
 
   .input-style{
-    @apply px-3 border h-[42px] outline-none text-lg font-['Open_Sans'] focus:border-blue-400 focus:outline-blue-300/30 outline-offset-0
+    @apply px-3 border h-[42px] outline-none text-lg  font-['Open_Sans'] focus:border-blue-400 focus:outline-blue-300/30 outline-offset-0
   }
 
 }

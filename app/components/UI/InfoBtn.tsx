@@ -1,13 +1,16 @@
+'use client'
 import { BsPlus } from "react-icons/bs";
 
 interface InfoBtnProps{
   title: string;
   style: 'green' | 'blue' | 'gray' | 'purple';
-  icon?: boolean
+  icon?: boolean,
+  ClickBtn?: () => void
 }
-const InfoBtn: React.FC<InfoBtnProps> = ({title, style, icon}) => {
+const InfoBtn: React.FC<InfoBtnProps> = ({title, style, icon, ClickBtn}) => {
   return ( 
     <div 
+      onClick={ClickBtn}
       className={`
         px-2
         border-2 font-bold text-xl font-['Open_Sans'] flex items-center

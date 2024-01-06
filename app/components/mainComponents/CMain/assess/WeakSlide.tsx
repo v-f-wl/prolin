@@ -1,6 +1,4 @@
 'use client'
-import FlexBetween from "@/app/components/UI/FlexBetween";
-import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { useMemo, useState } from "react";
 import WInfo from "./WInfo";
 
@@ -26,26 +24,26 @@ const WeakSlide = () => {
   }, [])
 
   const grathData: grathDataInt = {
-    'mon': {
-      'one': 45,
-      'two': 53,
-      'three': 56
-    },
-    'tue':{
-      'one': 75,
-      'two': 53,
-      'three': 36
-    },
-    'wed':{
-      'one': 15,
-      'two': 46,
-      'three': 38
-    },
-    'sun': {
-      'one': 15,
-      'two': 76,
-      'three': 38
-    }
+    // 'mon': {
+    //   'one': 45,
+    //   'two': 53,
+    //   'three': 56
+    // },
+    // 'tue':{
+    //   'one': 75,
+    //   'two': 53,
+    //   'three': 36
+    // },
+    // 'wed':{
+    //   'one': 15,
+    //   'two': 46,
+    //   'three': 38
+    // },
+    // 'sun': {
+    //   'one': 15,
+    //   'two': 76,
+    //   'three': 38
+    // }
   }
 
   const renderWeekData = useMemo(() => {

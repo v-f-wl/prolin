@@ -15,11 +15,11 @@ const Switch = () => {
     >
       <div 
         className="
-          h-8 w-8
+          h-[28px] w-[28px]
         bg-white  
           rounded-full 
           absolute top-1/2 left-1 -translate-y-1/2 dark:right-1 dark:left-auto
-          flex items-center justify-center text-xl
+          flex items-center justify-center text-lg
         text-indigo-400
         "
       >
