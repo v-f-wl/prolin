@@ -17,7 +17,7 @@ const TodoModal = () => {
 
 
   return ( 
-    <div className={`${isOpen ? 'flex items-center justify-center' : 'hidden'} fixed inset-0 bg-stone-500/70 dark:bg-gray-800/70 z-50`}>
+    <div className={`${isOpen ? 'flex items-center justify-center' : 'hidden'} fixed inset-0  bg-stone-500/70 dark:bg-gray-800/70 z-50`}>
       <Widget className="w-[780px] p-6 flex flex-col gap-7">
         <ModalTitle/>
         <ModalSwitch changeModal={changeModalValue} currentValue={modal}/>

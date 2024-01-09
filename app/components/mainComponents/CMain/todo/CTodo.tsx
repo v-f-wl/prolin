@@ -1,12 +1,17 @@
 import { useMemo } from "react"
 import ToDoCard from "./ToDoCard"
-import { FaRegFaceSmileBeam } from 'react-icons/fa6'
+
+interface TodDoDate{
+  [key: string]: string
+}
 
 type TodoType = {
-  id: string,
+  _id: string,
   todoAt: string,
-  title: string,
-  check: boolean
+  todoText: string,
+  createdAt: TodDoDate,
+  todoPriority: string,
+  completed: boolean,
 }
 interface CTodoProps{
   title: string,
@@ -19,13 +24,14 @@ const CTodo:React.FC<CTodoProps> = ({
 
   const renderToDo = useMemo(() => {
     const result = []
-
     for(let i = 0; i < collectionOfTodo.length; i++){
       result.push(
         <ToDoCard
-          title={collectionOfTodo[i].title}
-          dateFor={collectionOfTodo[i].todoAt}
-          checked={collectionOfTodo[i].check}
+          title={collectionOfTodo[i].todoText}
+          id={collectionOfTodo[i]._id}
+          dateFor={collectionOfTodo[i].createdAt}
+          completed={collectionOfTodo[i].completed}
+          priority={collectionOfTodo[i].todoPriority}
         />
       )
     }
@@ -42,15 +48,6 @@ const CTodo:React.FC<CTodoProps> = ({
       </div>
     )
   }
-
-  return(
-    <div className="flex flex-col gap-4">
-      <h3 className="text-neutral-500 dark:text-neutral-400">{title}</h3>
-      <div className="flex gap-3 items-center justify-center text-center text-blue-200">
-        Haven`t Todo <FaRegFaceSmileBeam/>
-      </div>
-    </div>
-  )
 }
  
 export default CTodo;

@@ -3,11 +3,13 @@ import { TypedUseSelectorHook, useSelector } from "react-redux";
 import ToDoModal from './features/ToDoModal'
 import Loading from './features/LoadStatus'
 import RatingModal from "./features/RatingModal";
+import TodoTasks from "./features/ToDoHandler";
 
 export const store = configureStore({
   reducer: {
     RatingModal,
     ToDoModal, 
+    TodoTasks,
     Loading
   }
 })

@@ -1,4 +1,4 @@
-import TodoType from "./app/types/todoType"
+import {TodoType} from "./app/types/todoType"
 
 const todoToday = [
   {

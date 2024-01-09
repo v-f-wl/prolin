@@ -67,8 +67,8 @@ const UserSchema = new mongoose.Schema(
     },
 
     todo_collection:{
-      type: Types.ObjectId, 
-      ref: 'Todo' ,
+      type: Array, 
+      default: [],
       description: 'Active todo tasks of the user',
     },
 

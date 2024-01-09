@@ -10,6 +10,8 @@ import CNotification from "./components/notification/CNotification";
 import FlexCenter from "./components/UI/FlexCenter";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setTasks } from "./redux/features/ToDoHandler";
 
 
 export default function Home() {
@@ -20,6 +22,8 @@ export default function Home() {
   
   const userIdValue = Cookies.get('user_id__value')
   const userTokenValue = Cookies.get('token__value')
+
+  const dispatch = useDispatch()
 
   const router = useRouter()
 
@@ -33,6 +37,7 @@ export default function Home() {
         })
         .then(res => {
           setCheckedToken(false)
+          dispatch(setTasks(res.data.user.todo_collection))
           console.log(res.data)
         })
         .catch(error => registerRout())
