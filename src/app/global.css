@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('../assets/fonts/PulpDisplay-Bold.ttf') format('ttf'),
+       url('../assets/fonts/PulpDisplay-Bold.woff') format('woff'),
+       url('../assets/fonts/PulpDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('../assets/fonts/PulpDisplay-Light.ttf') format('ttf'),
+       url('../assets/fonts/PulpDisplay-Light.woff') format('woff'),
+       url('../assets/fonts/PulpDisplay-Light.woff2') format('woff2');
+  font-weight: 300; 
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('../assets/fonts/PulpDisplay-LightItalic.ttf') format('ttf'),
+       url('../assets/fonts/PulpDisplay-LightItalic.woff') format('woff'),
+       url('../assets/fonts/PulpDisplay-LightItalic.woff2') format('woff2');
+  font-weight: 300; 
+  font-style: italic; 
+}
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('../assets/fonts/PulpDisplay-Medium.ttf') format('ttf'),
+       url('../assets/fonts/PulpDisplay-Medium.woff') format('woff'),
+       url('../assets/fonts/PulpDisplay-Medium.woff2') format('woff2');
+  font-weight: 500; 
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('../assets/fonts/PulpDisplay-Regular.ttf') format('ttf'),
+       url('../assets/fonts/PulpDisplay-Regular.woff') format('woff'),
+       url('../assets/fonts/PulpDisplay-Regular.woff2') format('woff2');
+  font-weight: 400; 
+  font-style: normal; 
+}
+
+
+:root{
+  --greenColor:#98cc00;
+  --bw: #000;
+}
+
+.dark{
+  --greenColor:#D5FE3E;
+  --bw: #fff;
+}
+body{
+  font-family: 'PulpDisplay';
+  font-weight: 300;
+}
+.flex-center{
+  align-items: center;
+  justify-content: center;
+}
