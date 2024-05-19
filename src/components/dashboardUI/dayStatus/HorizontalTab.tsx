@@ -5,6 +5,7 @@ import StatusTab from "./StatusTab";
 import WeekSlider from "./WeekSlider";
 import MounthSlider from "./MounthSlider";
 import YearSlider from "./YearSlider";
+import FlexBetween from "@/containers/FlexBetween";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState('week')
@@ -42,7 +43,7 @@ const Tabs = () => {
 
 
   return ( 
-    <div className="flex items-center gap-6 justify-between w-full">
+    <FlexBetween className="w-full gap-6">
       <div className="flex flex-col gap-3 flex-shrink-0">
         {tabTitles.map(item => (
           <StatusTab title={item.value} key={item.key} onClick={() => changeTab(item.key)} isActive={item.key === activeTab}/>
@@ -51,7 +52,7 @@ const Tabs = () => {
       <div className="w-full border-l pl-8 py-4">
         {renderComponent}
       </div>
-    </div>
+    </FlexBetween>
   );
 }
  

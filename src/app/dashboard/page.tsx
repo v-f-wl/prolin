@@ -9,7 +9,7 @@ export default function Page() {
     <div className="">
       <Header/>
       <MainContainer className="flex flex-col gap-7">
-        <PageTitle title="Main Dashboard"/>
+        <PageTitle title={'title'}/>
         <VerticalTabs/>
       </MainContainer>
     </div>

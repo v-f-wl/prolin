@@ -2,7 +2,6 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata } from "next";
 import './global.css'
 import Wrapper from "@/containers/Wrapper";
-import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,3 +30,4 @@ export default function RootLayout({
     </html>
   );
 }
+
