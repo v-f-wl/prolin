@@ -59,10 +59,52 @@
   --greenColor:#D5FE3E;
   --bw: #fff;
 }
+.greenPriority{
+  background: rgba(110, 231, 183, 0.30);
+  color: rgb(70, 205, 151);
+}
+.bluePriority{
+  background: rgba(96, 165, 250, 0.30 );
+  color: rgb(96, 165, 250);
+}
+.indigoPriority{
+  background: rgba(129, 140, 248, 0.30);
+  color: rgb(129, 140, 248);
+}
+.orangePriority{
+  background: rgba(251, 146, 60, 0.30);
+  color: rgba(251, 146, 60);
+}
+.redPriority{
+  background: rgba(248, 113, 113, 0.30);
+  color: rgb(248, 113, 113);
+}
+
+
 body{
-  font-family: 'PulpDisplay';
+  font-family: 'PulpDisplay', 'Arial';
   font-weight: 300;
 }
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-enter {
+  animation: modalOpen 0.3s forwards;
+}
+
+.modal-exit {
+  display: none;
+}
+
 .flex-center{
   align-items: center;
   justify-content: center;

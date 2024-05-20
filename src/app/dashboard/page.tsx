@@ -1,4 +1,5 @@
 
+import CreateTodo from "@/components/dashboardUI/CreateTodo";
 import VerticalTabs from "@/components/dashboardUI/VerticalTabs";
 import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
@@ -9,9 +10,11 @@ export default function Page() {
     <div className="">
       <Header/>
       <MainContainer className="flex flex-col gap-7">
-        <PageTitle title={'title'}/>
+        <PageTitle title={'Dashboard'}/>
         <VerticalTabs/>
+        <div className="h-[100px]">footer</div>
       </MainContainer>
+      <CreateTodo/>
     </div>
   );
 }

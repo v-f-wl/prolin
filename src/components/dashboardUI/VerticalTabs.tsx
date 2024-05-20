@@ -7,7 +7,7 @@ import TodoList from "./TodoList";
 import Notification from "./Notification";
 
 const VerticalTabs = () => {
-  const [activeTab, setActiveTab] = useState('DaysStatus')
+  const [activeTab, setActiveTab] = useState('ToDoList')
   const tadTitles = [
     {
       value: 'Days Status',

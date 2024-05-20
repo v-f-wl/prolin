@@ -53,6 +53,7 @@ const TodoCard:React.FC<TodoCardProps> = ({
         ))}
 
       </div>
+      <div className="border-t h-px border-opacity-10"></div>
       <div className="flex gap-4 items-center">
         <Button value="Complete" onClick={() => {}} style="fill"/>
         <Button value="Edit" onClick={() => {}} style="outline"/>

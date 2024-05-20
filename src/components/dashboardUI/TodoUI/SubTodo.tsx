@@ -22,7 +22,7 @@ const SubTodo = (props: SubList) => {
           ${completed ? 'bg-black dark:bg-white rounded-full' : 'border rounded-sm border-opacity-70'} 
         `}
       ></div>
-      <div className="italic text-xl">{props.value}</div>
+      <div className={`${completed && 'line-through'} italic text-xl`}>{props.value}</div>
     </div>
   );
 }

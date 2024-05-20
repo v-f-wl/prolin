@@ -1,8 +1,12 @@
 import ChildrenProps from "@/types/containerType";
 
-const CDayStatus:React.FC<ChildrenProps> = ({children}) => {
+interface CDayStatusProps{
+  className?: string
+}
+type CDayStatusType = ChildrenProps & CDayStatusProps
+const CDayStatus:React.FC<CDayStatusType> = ({children, className}) => {
   return ( 
-    <div className="grid grid-cols-status items-start gap-5 min-h-[400px]">
+    <div className={`grid grid-cols-status gap-5 min-h-[400px] ${className}`}>
       {children}
     </div>
   );

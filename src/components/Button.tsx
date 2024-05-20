@@ -3,13 +3,15 @@ interface ButtonProps{
   value: string,
   onClick: () => void,
   Icon?: string,
-  style: 'fill' | 'outline' | 'green'
+  style: 'fill' | 'outline' | 'green',
+  className?: string
 }
 const Button: React.FC<ButtonProps> = ({
   value,
   onClick,
   Icon,
-  style
+  style,
+  className
 }) => {
   return ( 
     <div 
@@ -22,9 +24,10 @@ const Button: React.FC<ButtonProps> = ({
         rounded-xl
         cursor-pointer transition-all hover:opacity-75
         border-2
+        ${className}
         ${style === 'fill' && ' border-foregroundDark dark:border-foregroundLight bg-foregroundDark dark:bg-foregroundLight text-white dark:text-black'}
         ${style === 'outline' && 'border-foregroundDark dark:border-foregroundLight text-black dark:text-white'}
-        ${style === 'green' && 'border-darkGreen dark:border-lightGreen'}
+        ${style === 'green' && 'border-lightGreen dark:border-darkGreen'}
       `}
     >
       {value}

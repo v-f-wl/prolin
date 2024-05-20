@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata } from "next";
 import './global.css'
 import Wrapper from "@/containers/Wrapper";
+import { ReduxProvider } from "@/store/provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,16 +17,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Wrapper>
-            {children}
-          </Wrapper>
-        </ThemeProvider>
+        <ReduxProvider>
+
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+            >
+            <Wrapper>
+              {children}
+            </Wrapper>
+          </ThemeProvider>
+        </ReduxProvider>
       </body>
     </html>
   );
