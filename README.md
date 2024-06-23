@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Poker Scrum
 
-## Getting Started
+Poker Scrum is a web application built with Next.js and Tailwind CSS that facilitates agile planning poker sessions. It allows teams to collaboratively estimate the effort required for tasks in a fun and interactive way.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Real-time Collaboration**: Users can join a session and see estimates from their teammates in real-time.
+- **Task Management**: Create, edit, and delete tasks within a session.
+- **Responsive Design**: Fully responsive design using Tailwind CSS, ensuring usability on any device.
+- **Customizable Cards**: Support for customizing the values on planning poker cards.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js, React, Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Database**: //
+- **Real-time Communication**: //
+- **Deployment**: Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Structure
 
-## Learn More
+poker_scrum/
+├── public/               # Static files
+│
+├── app/
+│   ├── layout.tsx/       # Root component
+│   ├── page.tsx/         # Main page
+│   └── globals.css/      # Main css file
+│ 
+├── assets/
+│   ├── fonts/            # Folder with fonts
+│   └── icons/            # Folder with icons
+│
+├── .gitignore            # Git ignore file
+├── next.config.js        # Next.js configuration
+├── package.json          # Project dependencies and scripts
+└── README.md             # Project documentation
 
-To learn more about Next.js, take a look at the following resources:
+## Acknowledgements
+Thanks to the creators of Next.js, Tailwind CSS, and other open-source projects used in this application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
+For any questions or feedback, please contact v.f.wl.kim@gmail.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
