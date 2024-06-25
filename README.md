@@ -27,7 +27,7 @@ poker_scrum/
 │ ├── page.tsx/     # Main page
 │ └── globals.css/  # Main css file
 │
-├── assets/
+├── _assets/
 │ ├── fonts/        # Folder with fonts
 │ └── icons/        # Folder with icons
 │
