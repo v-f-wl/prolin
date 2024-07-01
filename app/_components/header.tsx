@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -7,7 +8,9 @@ const Header = () => {
   // State to track the vertical scroll position
   const [scrollY, setScrollY] = useState(0)
 
-// Handler to update the scroll position state
+  const router = useRouter()
+
+  // Handler to update the scroll position state
   const handleScroll = () => {
     setScrollY(window.scrollY);
   }
@@ -36,10 +39,12 @@ const Header = () => {
         <div className="">FAQ</div>
         <div className="">Resourses</div>
       </div>
-      <div className={`
-          ${scrollY > 55 ? 'bg-indigo-400 text-white' : 'border border-indigo-400'}
-          md:px-8 py-0.5 text-lg  rounded-xl cursor-pointer hover:opacity-80 transition-opacity
-        `}
+      <div 
+          onClick={() => router.push('/lobby-access')}
+          className={`
+            ${scrollY > 55 ? 'bg-indigo-400 text-white' : 'border border-indigo-400'}
+            md:px-8 py-0.5 text-lg  rounded-xl cursor-pointer hover:opacity-80 transition-opacity
+          `}
       >
         Get Started
       </div>

@@ -2,8 +2,8 @@ const IntroSection = () => {
   return ( 
     <div className="h-screen flex flex-col items-center justify-center">
       <div className="flex w-full justify-between items-center gap-16">
-        <div className="flex flex-col gap-8 max-w-[550px]">
-          <h1 className="text-[54px] leading-tight">
+        <div className="flex flex-col gap-8 max-w-[800px]">
+          <h1 className="text-[54px] leading-tight font-['Transforma']">
             Scrum Poker: <br/> Streamline <span className="inline-block px-2 rounded-xl bg-indigo-400 text-white">Your Team's</span> Task Estimation
           </h1>
           <div className="max-w-[600px] font-light">

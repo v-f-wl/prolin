@@ -24,12 +24,17 @@ poker_scrum/
 │
 ├── app/
 │ ├── layout.tsx/   # Root component
-│ ├── page.tsx/     # Main page
+│ ├── page.tsx/     # Landing page
 │ └── globals.css/  # Main css file
 │
 ├── _assets/
 │ ├── fonts/        # Folder with fonts
 │ └── icons/        # Folder with icons
+│
+├── public/
+│ ├── fonts/       # Folder with fonts
+│ ├── images/       # Folder with pictures
+│ └── logos/        # Folder with pictures of logos
 │
 ├── .gitignore      # Git ignore file
 ├── next.config.js  # Next.js configuration

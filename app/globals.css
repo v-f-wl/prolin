@@ -7,7 +7,55 @@
     text-wrap: balance;
   }
 }
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('../_assets/fonts/pulp-display/PulpDisplay-Light.ttf') format('ttf'),
+       url('../_assets/fonts/pulp-display/PulpDisplay-Light.woff') format('woff'),
+       url('../_assets/fonts/pulp-display/PulpDisplay-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('../_assets/fonts/pulp-display/PulpDisplay-Regular.ttf') format('ttf'),
+       url('../_assets/fonts/pulp-display/PulpDisplay-Regular.woff') format('woff'),
+       url('../_assets/fonts/pulp-display/PulpDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('../_assets/fonts/pulp-display/PulpDisplay-Medium.ttf') format('ttf'),
+       url('../_assets/fonts/pulp-display/PulpDisplay-Medium.woff') format('woff'),
+       url('../_assets/fonts/pulp-display/PulpDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'PulpDisplay';
+  src: url('../_assets/fonts/pulp-display/PulpDisplay-SemiBold.ttf') format('ttf'),
+       url('../_assets/fonts/pulp-display/PulpDisplay-SemiBold.woff') format('woff'),
+       url('../_assets/fonts/pulp-display/PulpDisplay-SemiBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal; 
+}
 
+@font-face {
+  font-family: 'Transforma';
+  src: url('../_assets/fonts/transforma/Transforma-SemiBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal; 
+}
+
+
+body{
+  font-family: 'PulpDisplay', sans-serif, serif;
+  font-weight: lighter;
+}
+
+.transforma{
+  font-family: 'Transforma', sans-serif;
+}
 .header-animation{
   animation: slideDown 0.4s ease-out;
 }

@@ -1,6 +1,6 @@
-import Header from "./component/header";
-import HowItWorks from "./component/how-it-works";
-import IntroSection from "./component/intro-section";
+import Header from "./_components/header";
+import HowItWorks from "./_components/how-it-works";
+import IntroSection from "./_components/intro-section";
 
 export default function Home() {
   return (
