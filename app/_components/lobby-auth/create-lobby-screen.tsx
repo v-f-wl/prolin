@@ -1,3 +1,5 @@
+'use client'
+import { useRouter } from "next/navigation";
 import Button from "../authUI/button";
 import AuthInput from "../authUI/input";
 import SubTitle from "../authUI/sub-title";
@@ -11,6 +13,7 @@ const CreateLobby = ({
   isActive: boolean,
   changeScreen: () => void
 }) => {
+  const router = useRouter()
   return ( 
     <div 
       className={`
@@ -44,7 +47,7 @@ const CreateLobby = ({
           <AuthInput label="Enter name"/>
           <AuthInput label="Enter profession(optional)"/>
           <AuthInput label="Enter lobby ID"/>
-          <Button onClick={() => console.log('click')} style="light" label="Create"/>
+          <Button onClick={() => router.push('/lobby-session/fsfbdfb')} style="light" label="Create"/>
         </div>
       </div>
     </div>

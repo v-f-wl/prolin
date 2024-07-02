@@ -20,26 +20,29 @@ Poker Scrum is a web application built with Next.js and Tailwind CSS that facili
 ## Project Structure
 ``` bash
 poker_scrum/
-├── public/         # Static files
-│
-├── app/
-│ ├── layout.tsx/   # Root component
-│ ├── page.tsx/     # Landing page
-│ └── globals.css/  # Main css file
-│
-├── _assets/
-│ ├── fonts/        # Folder with fonts
-│ └── icons/        # Folder with icons
-│
-├── public/
-│ ├── fonts/       # Folder with fonts
-│ ├── images/       # Folder with pictures
-│ └── logos/        # Folder with pictures of logos
-│
-├── .gitignore      # Git ignore file
-├── next.config.js  # Next.js configuration
-├── package.json    # Project dependencies and scripts
-└── README.md       # Project documentation
+├── public/            # Static files
+│  
+├── app/   
+│ ├── layout.tsx/      # Root component
+│ ├── page.tsx/        # Landing page
+│ ├── globals.css/     # Main css file
+│ │
+│ └── lobby-access/    # Landing page
+│     └─ page.tsx      # Page for lobby creation or entry
+│  
+├── _assets/   
+│ ├── fonts/           # Folder with fonts
+│ └── icons/           # Folder with icons
+│  
+├── public/  
+│ ├── fonts/           # Folder with fonts
+│ ├── images/          # Folder with pictures
+│ └── logos/           # Folder with pictures of logos
+│  
+├── .gitignore         # Git ignore file
+├── next.config.js     # Next.js configuration
+├── package.json       # Project dependencies and scripts
+└── README.md          # Project documentation
 ```
 ## Acknowledgements
 
