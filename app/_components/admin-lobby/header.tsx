@@ -15,7 +15,7 @@ const AdminHeader = () => {
             Copy Lobby ID
         </div>
       </div>
-      <div className="px-4 flex items-center gap-2 bg-white rounded-full">
+      <div className="px-4 flex items-center gap-2 bg-white rounded-full cursor-pointer">
         <ICrown size="24"/>
         Create a new game
       </div>

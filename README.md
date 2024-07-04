@@ -26,9 +26,11 @@ poker_scrum/
 │ ├── layout.tsx/      # Root component
 │ ├── page.tsx/        # Landing page
 │ ├── globals.css/     # Main css file
+│ ├── lobby-session/   # Lobby dashboard
+│ │   └─ page.tsx      
 │ │
-│ └── lobby-access/    # Landing page
-│     └─ page.tsx      # Page for lobby creation or entry
+│ └── lobby-access/    # lobby auth
+│     └─ page.tsx      
 │  
 ├── _assets/   
 │ ├── fonts/           # Folder with fonts
