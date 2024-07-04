@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import SidebarButton from "../lobbyUI/sidebar-button";
 import MenuUsers from "./users-tab";
 import IProfile from "@/_assets/icons/IProfile";
@@ -14,6 +14,18 @@ const MenuSidebar = () => {
     if(label) setActiveTad(() => label)
   }
 
+  const renderActiveTab = useMemo(() => {
+    switch (activeTab) {
+      case 'users':
+        return <MenuUsers />;
+      case 'history':
+        return <HistoryTab />;
+      case 'dashboard':
+        return <MenuUsers />;
+      default:
+        return <MenuUsers/>;
+    }
+  }, [activeTab])
   return ( 
     <div className="flex gap-8">
       <div className="flex flex-col gap-6">
@@ -23,8 +35,7 @@ const MenuSidebar = () => {
         <SidebarButton label="exit" isActive={false} onClick={handleChangeTab}/>
       </div>
       
-      <MenuUsers/>
-      {/* <HistoryTab/> */}
+      {renderActiveTab}
     </div>
   );
 }
