@@ -1,8 +1,8 @@
 import Button from "../authUI/button";
 import AuthInput from "../authUI/input";
-import SubTitle from "../authUI/sub-title";
 import TextSpace from "../authUI/text-space";
 import Title from "../authUI/title"
+import SubTitle from "../UI/subtitle";
 
 const JoinScreen = ({
   isActive,
