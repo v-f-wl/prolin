@@ -1,7 +1,7 @@
-const Page = () => {
+const page = () => {
   return ( 
     <div className=""></div>
    );
 }
  
-export default Page;
+export default page;
