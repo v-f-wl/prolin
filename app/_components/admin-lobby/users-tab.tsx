@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
-import SubTitle from "../authUI/sub-title";
 import UserMenu from "./user-menu";
+import SubTitle from "../UI/subtitle";
 
 const MenuUsers = () => {
   const [openMenuUser, setOpenMenuUser] = useState('')
