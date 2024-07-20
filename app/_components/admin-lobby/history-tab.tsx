@@ -1,4 +1,4 @@
-import SubTitle from "../authUI/sub-title";
+import SubTitle from "../UI/subtitle";
 
 const HistoryTab = () => {
   return ( 

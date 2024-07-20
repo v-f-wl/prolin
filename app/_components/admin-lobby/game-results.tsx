@@ -1,4 +1,4 @@
-import SubTitle from "../authUI/sub-title";
+import SubTitle from "../UI/subtitle";
 import ResultCard from "./game-result-card";
 
 const GameResults = () => {

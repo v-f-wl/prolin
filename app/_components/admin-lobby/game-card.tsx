@@ -1,5 +1,3 @@
-import SubTitle from "../authUI/sub-title";
-
 const GameCard = ({
   title,
   gameId,
