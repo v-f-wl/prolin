@@ -1,6 +1,19 @@
-const SelectItem = () => {
+
+const SelectItem = ({
+  value,
+  label,
+  changeOption
+} : {
+  value: string,
+  label: string,
+  changeOption: (label: string) => void
+}) => {
   return ( 
-    <div className=""></div>
+    <div 
+      onClick={() => changeOption(label)}
+      className="cursor-pointer">
+      {label}
+    </div>
   );
 }
  
