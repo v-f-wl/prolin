@@ -1,3 +1,4 @@
+import Button from "../authUI/button";
 import SubTitle from "../UI/subtitle";
 import ModalDescription from "./modal-cereateUI/modal-description";
 import GridContainer from "./modal-cereateUI/modal-grid-container";
@@ -19,6 +20,9 @@ const CreateTab = () => {
         <SelectPlayers/>
         <ModalStoryPoint/>
       </GridContainer>
+      <div className="mt-4 flex justify-center ">
+        <Button style="light" label="create" onClick={() => {}}/>
+      </div>
     </div>
   );
 }

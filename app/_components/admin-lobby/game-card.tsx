@@ -24,17 +24,30 @@ const GameCard = ({
           Round {round}
         </div>
       </div>
-      <div className="flex items-center gap-8">
-        {/* TODO:  sreate button component*/}
-        <div className="cursor-pointer">
-          Start
+      {isActive ? 
+      (
+        <div className="flex items-center gap-8">
+          {/* TODO:  sreate button component*/}
+          <div className="cursor-pointer">
+            Waiting for the end
+          </div>
         </div>
+      )
+      :
+      (
+        <div className="flex items-center gap-8">
+          {/* TODO:  sreate button component*/}
+          <div className="cursor-pointer">
+            Start
+          </div>
 
-        {/* TODO:  sreate button component*/}
-        <div className="cursor-pointer">
-          Edit
+          {/* TODO:  sreate button component*/}
+          <div className="cursor-pointer">
+            Edit
+          </div>
         </div>
-      </div>
+      ) 
+      }
     </div>
   );
 }
