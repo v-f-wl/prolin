@@ -1,9 +1,9 @@
 'use client'
 import { useRouter } from "next/navigation";
-import Button from "../authUI/button";
-import AuthInput from "../authUI/input";
-import TextSpace from "../authUI/text-space";
-import Title from "../authUI/title";
+import Button from "./authUI/button";
+import AuthInput from "./authUI/input";
+import TextSpace from "./authUI/text-space";
+import Title from "./authUI/title";
 import SubTitle from "../UI/subtitle";
 
 const CreateLobby = ({

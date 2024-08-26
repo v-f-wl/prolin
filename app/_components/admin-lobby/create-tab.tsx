@@ -1,4 +1,4 @@
-import Button from "../authUI/button";
+import Button from "../lobby-auth/authUI/button";
 import SubTitle from "../UI/subtitle";
 import ModalDescription from "./modal-cereateUI/modal-description";
 import GridContainer from "./modal-cereateUI/modal-grid-container";

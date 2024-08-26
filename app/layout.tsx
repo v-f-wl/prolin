@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from 'next/font/google'
 import "./globals.css";
+import { ReduxProvider } from "@/redux/provider";
 
 
 export const metadata: Metadata = {
@@ -17,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={notoSans.className}>{children}</body>
+      <body className={notoSans.className}>
+        <ReduxProvider> 
+          {children}
+        </ReduxProvider>
+      </body>
     </html>
   );
 }

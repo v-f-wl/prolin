@@ -40,7 +40,7 @@ const Header = () => {
         <div className="">Resourses</div>
       </div>
       <div 
-          onClick={() => router.push('/lobby-access')}
+          onClick={() => router.push('/lobby-access/newLobby')}
           className={`
             ${scrollY > 55 ? 'bg-indigo-400 text-white' : 'border border-indigo-400'}
             md:px-8 py-0.5 text-lg  rounded-xl cursor-pointer hover:opacity-80 transition-opacity

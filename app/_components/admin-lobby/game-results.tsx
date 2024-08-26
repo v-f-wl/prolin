@@ -14,7 +14,7 @@ const GameResults = () => {
           Round 1
         </div>
       </div>
-      <div className="mt-4 flex items-center justify-between gap-12">
+      <div className="mt-4 flex items-center gap-4">
         <ResultCard title="Max Value" value="6"/>
         <ResultCard title="Min Value" value="1"/>
         <ResultCard title="Average value" value="3"/>

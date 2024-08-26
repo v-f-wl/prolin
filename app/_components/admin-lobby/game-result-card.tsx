@@ -6,11 +6,11 @@ const ResultCard = ({
   value: string
 }) => {
   return ( 
-    <div className="bg-gray-300/20 rounded-xl h-36 flex flex-col items-center justify-center gap-5 w-full">
-      <div className="text-xl">
+    <div className="bg-gray-300/20 rounded-xl inline-flex items-center justify-center gap-2 px-4 py-2">
+      <div className="">
         {title}
       </div>
-      <div className="font-normal text-3xl text-indigo-500">
+      <div className="font-normal">
         {value}
       </div>
     </div>

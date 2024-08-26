@@ -1,4 +1,4 @@
-import AuthSwitch from "../_components/lobby-auth/auth-switch";
+import AuthSwitch from "../../_components/lobby-auth/auth-switch";
 
 export default function Home(){
   return ( 

@@ -14,7 +14,8 @@ const config: Config = {
       },
       gridTemplateColumns: {
         // Simple 16 column grid
-        'main-lobby': '300px 1fr',
+        'admin-lobby': '300px 1fr',
+        'user-lobby': '1fr 300px',
       }
     },
   },

@@ -2,23 +2,26 @@
 import { useState } from "react";
 import JoinScreen from "./join-screen";
 import CreateLobby from "./create-lobby-screen";
+import { useParams } from "next/navigation";
 
 // переименовать состояние click
 const AuthSwitch = () => {
-  const [click, setClick] = useState(true)
-
-  const handleChange = () => {
-    setClick(prev =>!prev) 
+  const [changeTab, setChangeTab] = useState(true)
+  const params = useParams()
+  const { lobbyId } = params
+  const handleChangeTab = () => {
+    if(lobbyId !== 'newLobby') return
+    setChangeTab(prev =>!prev) 
   }
   return ( 
     <div className="max-w-[1024px] w-full h-[640px] rounded-xl flex overflow-hidden relative">
-      <JoinScreen isActive={click} changeScreen={handleChange}/>
-      <CreateLobby isActive={click} changeScreen={handleChange}/>
+      <JoinScreen isActive={changeTab} changeScreen={handleChangeTab}/>
+      <CreateLobby isActive={changeTab} changeScreen={handleChangeTab}/>
 
       {/* background switch */}
       <div 
         className={`
-          ${click ? 'translate-x-full' : 'translate-x-0 '} 
+          ${changeTab ? 'translate-x-full' : 'translate-x-0 '} 
           absolute top-0 z-10
           w-1/2 h-full 
           bg-black/20
